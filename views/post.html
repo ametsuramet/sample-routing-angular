@@ -1,0 +1,38 @@
+<div class="container">
+<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+	<input type="text" ng-model="q" class="form-control" />
+</div>
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+	<h3>{{data.title}}</h3>
+	<div ng-bind-html="data.description"></div>
+
+	<div class="table-responsive">
+		<table class="table table-hover">
+			<thead>
+				<tr>
+					<th>No</th>
+					<th>Judul</th>
+					<th>Kategori</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="(i,item) in post_list | filter:q as results">
+					<td>{{i+1}}</td>
+					<td ng-click="load_post(item)">{{item.title}}</td>
+					<td>{{item.cat_name}}</td>
+				</tr>
+				<tr class="animate-repeat" ng-if="results.length == 0">
+					<td colspan="3">
+			      		<strong>No results found...</strong>
+			      	</td>
+			    </tr>
+			</tbody>
+		</table>
+	</div>
+	
+	<div class="well" ng-show="detail_post">
+			<h3>{{detail_post.title}}</h3>
+			<div ng-bind-html="detail_post.description"></div>
+	</div>
+</div>
+</div>

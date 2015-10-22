@@ -1,0 +1,27 @@
+<html ng-app="app">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" type="text/css"  rel="stylesheet">
+    <link href="bower_components/angular/angular-csp.css" type="text/css"  rel="stylesheet" >
+    <link href="css/style.css" type="text/css"  rel="stylesheet" >
+</head>
+<body>
+    
+    <div ng-include src="'views/menu.html'"></div>
+    <div ng-view id="main-wrapper"></div>
+
+
+    <script src="bower_components/jquery/dist/jquery.min.js" type="text/javascript" ></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js" type="text/javascript" ></script>
+    <script src="bower_components/angular/angular.min.js" type="text/javascript" ></script>
+    <script src="bower_components/angular-route/angular-route.min.js" type="text/javascript" ></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.min.js" type="text/javascript" ></script>
+    <script src="bower_components/angular-local-storage/dist/angular-local-storage.min.js" type="text/javascript" ></script>
+    <script src="js/app.js" type="text/javascript"></script>
+    <script src="js/controllers.js" type="text/javascript"></script>
+    <script src="js/script.js" type="text/javascript"></script>
+    
+</body>
+</html>
